@@ -6,14 +6,17 @@ CREATE TABLE t_erp_user_account (
    password            TEXT
 );
  
+ 
 DROP TABLE IF EXISTS t_erp_goods;
+
 CREATE TABLE t_erp_goods (
-    ObjectId         INTEGER  not null primary key AUTOINCREMENT, --objectId
-    type             INTEGER,
-    typename         TEXT,
-    id               INTEGER  , --手机Id 归属哪个ID 型号
-    name             TEXT --名字
+    id       INTEGER NOT NULL
+                     PRIMARY KEY AUTOINCREMENT,-- 手机Id 归属哪个ID 型号
+    type     INTEGER,
+    typename TEXT,
+    name     TEXT-- 名字
 );
+
 
 DROP TABLE IF EXISTS t_erp_goods_details;
 CREATE TABLE t_erp_goods_details (
